@@ -9,6 +9,7 @@ step "run-octopus-deploy-runbook" {
             Run.Runbook.Api.Key = "#{apiKey}"
             Run.Runbook.AutoApproveManualInterventions = "No"
             Run.Runbook.Base.Url = "#{Octopus.Web.ServerUri}"
+            Run.Runbook.CaCBranchName = "devops/SSRS_Fixed"
             Run.Runbook.CancelInSeconds = "1800"
             Run.Runbook.CustomNotes.Toggle = "False"
             Run.Runbook.DateTime = "N/A"
