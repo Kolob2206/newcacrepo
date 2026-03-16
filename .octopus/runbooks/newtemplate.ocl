@@ -1,4 +1,4 @@
-name = "NewTemplate"
+name = "SSRS Reports Deploy New"
 default_guided_failure_mode = "EnvironmentDefault"
 description = ""
 
