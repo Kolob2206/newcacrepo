@@ -17,16 +17,11 @@ step "run-octopus-deploy-runbook" {
             Run.Runbook.Machines = "N/A"
             Run.Runbook.ManualIntervention.EnvironmentToUse = "#{Octopus.Environment.Name}"
             Run.Runbook.Name = "SSRS Reports Deploy New"
-            Run.Runbook.Project.Name = "#{Octopus.Project.Name}"
+            Run.Runbook.Project.Name = "NewCacTemplate"
             Run.Runbook.Space.Name = "#{Octopus.Space.Name}"
             Run.Runbook.UsePublishedSnapShot = "True"
             Run.Runbook.Waitforfinish = "False"
         }
         worker_pool = "hosted-ubuntu"
-
-        container {
-            feed = "dockerhub"
-            image = "octopusdeploy/worker-tools:6.5.0-ubuntu.22.04"
-        }
     }
 }
